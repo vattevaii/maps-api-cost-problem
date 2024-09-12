@@ -83,5 +83,7 @@ Note that the place ID, used to uniquely identify a place, is exempt from the ca
 
 ## Most-cost-effective solution ?? :
 **Host your own map server**: I really looked into this, since I found limited options to optimize the google maps API for cost cutting.. 
+
 *WHY?*: The only thing I was sure of is that, using the google maps API in a very limited fashion (use free google embedding for the map, dont use any of the APIs until the user interacts with the map) can improve the cost performance on the site without caching any of the responses. Also, we can restrict our map to a specific location if we do this. Suppose our services are only available in Kathmandu valley, we can just add the maps of Kathmandu to our server. Also we can use the *Places API* to get a whole list of our required topics in a area of 50000 KM (from the google docs). This data can be cached and refetched periodically for every area of Kathmandu to get all the stores we are interested in.
+
 *HOW?*: Since [PostGis](https://postgis.net/) is a open-source service, we can use this to store and maintain our own dataset of locations. I'm still not sure how everythingg will work but if we maintain our set of map service, it will be way more cost effective in the long run. I know it may take a lot of developer time but I really think this is the way to go if you really want a cost effective method.
