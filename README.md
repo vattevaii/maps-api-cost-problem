@@ -61,10 +61,14 @@ Routes: Since Google provides all the in between routes during a Compute Route A
 ```
 If we can cache the response for longer routes, then we can check if we already have the routes for the in between routes. 
 Example: User wants to go from Koteshowr to Gatthaghar
+
  Case a) we dont have any cached data going from Koteshowr to Gatthaghar in any of the routes
+
  Case b) we have a cached route from Airport to Banepa, which includes Koteshowr to Gatthaghar in it
 
+
 in case a) we have to fetch the route using google Maps API
+
 in case b) we can just reuse specific portion of the route
 
 > Note: But this is not allowed by google.
